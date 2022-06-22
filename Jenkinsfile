@@ -1,12 +1,12 @@
 pipeline {
-    agent any
-    options {
-        // skipStagesAfterUnstable()
+    agent {
+        docker { image 'node:14-alpine' }
     }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
                 echo "Hello Jenkins Pipeline! "
+                sh 'node --version'
             }
         }
     }
