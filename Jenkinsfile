@@ -7,6 +7,7 @@ pipeline {
         stage('First Stage') {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "Ejecutando Job para el universo ${params.universe_version}."
                 echo "Hello Jenkins Pipeline!"
             }
         }
