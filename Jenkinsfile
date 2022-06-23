@@ -20,7 +20,6 @@ pipeline {
                 doSmx() // Esta instrucción, aunque físicamente en este proyecto, está expuesta en Jenkins como biblioteca común.
                 script {
                     Util ut = new Util()
-                    ut.myEcho("Echo me!")
                     print ut.mySumOne(3)
                 }
             }
