@@ -1,20 +1,12 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'universe_version', defaultValue: 'no-Version', description: 'This is the universe version.')
+    }
     stages {
-        stage('Setup parameters') {
-            steps {
-                script {
-                    properties([
-                        string(
-                        defaultValue: 'no-Universe-version',
-                        name: 'universe_version'),
-                        trim: true
-                    ])
-                }
-            }
-        }
         stage('First Stage') {
             steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "Hello Jenkins Pipeline!"
             }
         }
