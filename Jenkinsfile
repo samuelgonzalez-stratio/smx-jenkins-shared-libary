@@ -1,4 +1,4 @@
-//@Library('smx-shared-library')_
+@Library('smx-shared-library')_
 import smx.Util
 
 pipeline {
