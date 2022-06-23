@@ -14,6 +14,7 @@ pipeline {
         stage('Second Stage') {
             steps {
                 echo "I'm in the second Stage."
+                doSmx()
             }
         }
     }
