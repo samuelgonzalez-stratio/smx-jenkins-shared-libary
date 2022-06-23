@@ -1,4 +1,5 @@
 @Library('smx-shared-library')_
+import smx.Util
 
 pipeline {
     agent any
@@ -16,7 +17,10 @@ pipeline {
         stage('Second Stage') {
             steps {
                 echo "I'm in the second Stage."
-                doSmx()
+                doSmx() // Esta instrucción, aunque físicamente en este proyecto, está expuesta en Jenkins como biblioteca común.
+                Util ut = new Util()
+                ut.myEcho("Echo me!")
+                print ut.mySumOne(3)
             }
         }
     }
