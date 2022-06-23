@@ -18,9 +18,11 @@ pipeline {
             steps {
                 echo "I'm in the second Stage."
                 doSmx() // Esta instrucción, aunque físicamente en este proyecto, está expuesta en Jenkins como biblioteca común.
-                Util ut = new Util()
-                ut.myEcho("Echo me!")
-                print ut.mySumOne(3)
+                script {
+                    Util ut = new Util()
+                    ut.myEcho("Echo me!")
+                    print ut.mySumOne(3)
+                }
             }
         }
     }
