@@ -1,3 +1,5 @@
+@Library('smx-shared-library')_
+
 pipeline {
     agent any
     parameters {
